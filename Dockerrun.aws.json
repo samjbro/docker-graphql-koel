@@ -24,7 +24,7 @@
     {
       "name": "api",
       "image": "samjbro/koel-api",
-      "hostname": "server",
+      "hostname": "api",
       "essential": false,
       "command": [""],
       "memory": 128
