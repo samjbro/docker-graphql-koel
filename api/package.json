@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "express": "4.16.4",
+    "apollo-server-express": "2.4.2",
+    "graphql": "14.1.1",
+    "graphql-cli": "3.0.10",
+    "graphql-import": "0.7.1",
+    "bcryptjs": "2.4.3",
+    "prisma": "1.26.6",
+    "prisma-binding": "2.3.2",
+    "env-cmd": "8.0.2",
+    "jsonwebtoken": "8.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.10",
+    "@babel/core": "7.3.3",
+    "@babel/node": "7.2.2",
+    "@babel/preset-env": "7.3.1"
+  },
+  "scripts": {
+    "dev": "env-cmd ./config/dev.env nodemon server.js --exec babel-node",
+    "start": "node server.js",
+    "prisma:deploy-dev": "prisma deploy -e ./config/dev.env",
+    "prisma:deploy-prod": "prisma deploy",
+    "prisma:token": "prisma token -e ./config/dev.env",
+    "db:seed": "env-cmd ./config/dev.env babel-node src/utils/seedDatabase.js",
+    "get-schema": "env-cmd ./config/dev.env graphql get-schema -p prisma"
+  }
+}
