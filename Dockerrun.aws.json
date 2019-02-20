@@ -10,7 +10,7 @@
     },
     {
       "name": "nginx",
-      "image": "samjbro/koel-nginx",
+      "image": "samjbro/polygon-nginx",
       "essential": true,
       "hostname": "nginx",
       "portMappings": [
