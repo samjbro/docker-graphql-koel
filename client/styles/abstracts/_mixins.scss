@@ -1,0 +1,11 @@
+@mixin vertical-center () {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+@mixin inset-when-pressed () {
+  &:active {
+    box-shadow: inset 0 1rem 1rem -1rem rgba(0,0,0,1);
+  }
+}

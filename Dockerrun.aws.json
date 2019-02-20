@@ -1,0 +1,33 @@
+{
+  "AWSEBDockerrunVersion": 2,
+  "containerDefinitions": [
+    {
+      "name": "nginx",
+      "image": "samjbro/koel-nginx",
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 80
+        }
+      ],
+      "links": ["client", "api"],
+      "memory": 128
+    },
+    {
+      "name": "client",
+      "image": "samjbro/koel-client",
+      "hostname": "client",
+      "essential": false,
+      "memory": 128
+    },
+    {
+      "name": "api",
+      "image": "samjbro/koel-api",
+      "hostname": "server",
+      "essential": false,
+      "command": [""],
+      "memory": 128
+    }
+  ]
+}
