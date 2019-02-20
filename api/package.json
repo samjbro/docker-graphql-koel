@@ -21,7 +21,7 @@
     "@babel/register": "7.0.0"
   },
   "scripts": {
-    "dev": "env-cmd ./config/dev.env nodemon server.js --exec babel-node",
+    "dev": "env-cmd ./config/dev.env nodemon src/index.js --exec babel-node",
     "build": "babel src -d dist",
     "start": "npm run build && node dist/index.js",
     "prisma:deploy-dev": "prisma deploy -e ./config/dev.env",
