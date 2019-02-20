@@ -4,7 +4,7 @@ import { ApolloServer } from 'apollo-server-express'
 import { importSchema } from 'graphql-import'
 
 import prisma from './prisma'
-import resolvers from './src/resolvers'
+import resolvers from './resolvers'
 
 const app = express()
 
@@ -18,8 +18,4 @@ server.applyMiddleware({ app, path: '/graphql' })
 
 const httpServer = createServer(app)
 
-const PORT = 4000
-
-httpServer.listen(PORT, () => {
-  console.log(`API listening on port ${4000}`)
-})
+export { httpServer as default }

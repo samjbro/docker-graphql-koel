@@ -9,17 +9,21 @@
     "prisma": "1.26.6",
     "prisma-binding": "2.3.2",
     "env-cmd": "8.0.2",
-    "jsonwebtoken": "8.4.0"
+    "jsonwebtoken": "8.4.0",
+    "@babel/polyfill": "7.2.5"
   },
   "devDependencies": {
     "nodemon": "1.18.10",
+    "@babel/cli": "7.2.3",
     "@babel/core": "7.3.3",
     "@babel/node": "7.2.2",
-    "@babel/preset-env": "7.3.1"
+    "@babel/preset-env": "7.3.1",
+    "@babel/register": "7.0.0"
   },
   "scripts": {
     "dev": "env-cmd ./config/dev.env nodemon server.js --exec babel-node",
-    "start": "echo \"WHY WILL YOU NOT WORK?????\"",
+    "build": "babel src -d dist",
+    "start": "npm run build && node dist/index.js",
     "prisma:deploy-dev": "prisma deploy -e ./config/dev.env",
     "prisma:deploy-prod": "prisma deploy",
     "prisma:token": "prisma token -e ./config/dev.env",
