@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "env-cmd ./config/dev.env nodemon server.js --exec babel-node",
-    "start": "babel-node server.js",
+    "start": "echo \"WHY WILL YOU NOT WORK?????\"",
     "prisma:deploy-dev": "prisma deploy -e ./config/dev.env",
     "prisma:deploy-prod": "prisma deploy",
     "prisma:token": "prisma token -e ./config/dev.env",
