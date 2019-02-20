@@ -9,13 +9,6 @@
       "memory": 128
     },
     {
-      "name": "api",
-      "image": "samjbro/koel-api",
-      "hostname": "api",
-      "essential": false,
-      "memory": 128
-    },
-    {
       "name": "nginx",
       "image": "samjbro/koel-nginx",
       "essential": true,
@@ -26,7 +19,7 @@
           "containerPort": 80
         }
       ],
-      "links": ["client", "api"],
+      "links": ["client"],
       "memory": 128
     }
   ]
