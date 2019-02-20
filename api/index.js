@@ -1,7 +1,3 @@
-// import '@babel/polyfill'
-
-// import server from './server.js'
-
 const express = require('express')
 
 const server = express()

@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "env-cmd ./config/dev.env nodemon server.js --exec babel-node",
     "build": "babel src -d dist",
-    "start": "npm run build && node dist/index.js",
+    "start": "node index.js",
     "prisma:deploy-dev": "prisma deploy -e ./config/dev.env",
     "prisma:deploy-prod": "prisma deploy",
     "prisma:token": "prisma token -e ./config/dev.env",
