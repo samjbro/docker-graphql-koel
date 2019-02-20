@@ -19,6 +19,7 @@
       "name": "nginx",
       "image": "samjbro/koel-nginx",
       "essential": true,
+      "hostname": "nginx",
       "portMappings": [
         {
           "hostPort": 80,
