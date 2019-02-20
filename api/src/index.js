@@ -1,6 +1,10 @@
 import '@babel/polyfill'
 
-import server from './server.js'
+// import server from './server.js'
+
+const express = require('express')
+
+const server = express()
 
 const PORT = 4000
 
