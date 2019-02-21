@@ -3,7 +3,7 @@
     <div class="app__main" v-if="currentUser">
       <app-header />
       <main-wrapper />
-      Hello World
+      Hello Terry
     </div>
     <div class="app__login" v-else>
       <login-form />
