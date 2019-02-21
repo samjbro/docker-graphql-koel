@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ "$TRAVIS_BRANCH" != "master" && "$TRAVIS_PULL_REQUEST" = true ]] ; then
+if [[ "$TRAVIS_BRANCH" != "master" || "$TRAVIS_PULL_REQUEST" = true ]] ; then
   echo "Skipping push to Docker since we're not on the master branch"
   exit 0
 else
