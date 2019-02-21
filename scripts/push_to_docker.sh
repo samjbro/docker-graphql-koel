@@ -1,9 +1,11 @@
 #!/bin/bash
-
+echo "$TRAVIS_BRANCH"
+echo "$TRAVIS_PULL_REQUEST"
 if [[ "$TRAVIS_BRANCH" != "master" && "$TRAVIS_PULL_REQUEST" = false ]] ; then
   echo "Skipping push to Docker since we're not on the master branch"
   exit 0
 else
+echo "not skipping for some raisin"
 # Build images
   docker build -t samjbro/koel-nginx ./nginx
   docker build -t samjbro/koel-client ./client
