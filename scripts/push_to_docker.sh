@@ -1,6 +1,7 @@
 #!/bin/sh
 
 if [[ "$TRAVIS_BRANCH" != "master" && "$TRAVIS_PULL_REQUEST" = false ]] ; then
+  echo "Skipping push to Docker since we're not on the master branch"
   exit 0
 fi
 # Build images
